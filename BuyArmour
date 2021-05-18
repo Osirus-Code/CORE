@@ -1,0 +1,14 @@
+# Armoury Buy System
+
+on load:
+	set {_ArmouryBuy} to true:
+
+armoirybuy 3 %player%
+
+command /armoirybuy [<text>] [<player>]:
+	trigger:
+		if arg 1 is set:
+			if arg 2 is set:
+				if arg 2 is online:
+					if arg 1 is "":
+			
