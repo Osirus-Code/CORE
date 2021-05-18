@@ -1,0 +1,377 @@
+command /crystal [<text>] [<player>] [<text>] [<text>] [<text>] [<text>] [<text>]:
+	permission: owner.*
+	trigger:
+		if arg-1 is not set:
+			message "&f&l<&e&lUltra&6&lCrystals&f&l> &7- &eCrystals"
+			message ""
+			message " &6&l* &e/crystal give [player] [crystal] <crystal>"
+			message " &6&l* &e/crystal help"
+			message ""
+			message " &6&l* &e[] &7= Required"
+			message " &6&l* &e<> &7= Optional"
+			message ""
+			message "&7Made by ViiRal - With love - Version 6.0"
+		if arg-1 is not "give" or "list" or "help":
+			if arg-2 is not set:
+				message "&f&l<&e&lUltra&6&lCrystals&f&l> &7- &eCrystals"
+				message ""
+				message " &6&l* &e/crystal give [player] [crystal] <crystal>"
+				message " &6&l* &e/crystal help"
+				message ""
+				message " &6&l* &e[] &7= Required"
+				message " &6&l* &e<> &7= Optional"
+				message ""
+				message "&7Made by ViiRal - With love - Version 6.0"
+		if arg-1 is "help":
+			message "&f&l<&e&lUltra&6&lCrystals&f&l> &7- &eHelp"
+			message ""
+			message "&e&lEXAMPLES"
+			message "&e/crystal give ViiRal phantom yeti supreme koth dragon"
+			message "&e/crystal give ViiRal phantom yeti supreme koth"
+			message "&e/crystal give ViiRal phantom yeti supreme"
+			message "&e/crystal give ViiRal phantom yeti"
+			message "&e/crystal give ViiRal phantom"
+			message ""
+		if arg-1 is "list":
+			message "&f&l<&e&lUltra&6&lCrystals&f&l> &7- &eCrystals"
+			message ""
+			message "&cPhantom, &bYeti, &fYijki, &4Supreme, &5Traveler, &dKoth, &eDragon, &6Engineer."	
+		if arg-1 is "give":
+			if arg-2 is set:
+				if arg-3 is set:
+					if arg-3 is "phantom":
+						set {_slot1} to "&c&lP"
+						set {_lore1} to "&c&lPhantom||&c&l  * &c+5%% PvP DMG"
+					if arg-3 is "yeti":
+						set {_slot1} to "&b&lY"
+						set {_lore1} to "&b&lYeti||&b&l  * &b+2.5%% PvP DMG||&b&l  * &b-2.5%% Incoming DMG"
+					if arg-3 is "yijki":
+						set {_slot1} to "&f&lM"
+						set {_lore1} to "&f&lMother of Yijki||&f&l  * &f-5%% Incoming DMG"
+					if arg-3 is "supreme":
+						set {_slot1} to "&4&lS"
+						set {_lore1} to "&4&lSupreme||&4&l  * &4+3%% PvP DMG"
+					if arg-3 is "traveler":
+						set {_slot1} to "&5&lT"
+						set {_lore1} to "&5&lTraveler||&5&l  * &5+7.5%% PvP DMG"
+					if arg-3 is "koth":
+						set {_slot1} to "&d&lK"
+						set {_lore1} to "&d&lKoth||&d&l  * &d+5%% PvP DMG||&d&l  * &d-12.5%% Incoming DMG"
+					if arg-3 is "dragon":
+						set {_slot1} to "&e&lD"
+						set {_lore1} to "&e&lDragon||&e&l  * &e+10%% PvP DMG||&e&l  * &e-10%% Incoming DMG"
+					if arg-3 is "engineer":
+						set {_slot1} to "&6&lE"
+						set {_lore1} to "&6&lEngineer||&6&l  * &6-9%% Incoming DMG"
+					if arg-4 is set:
+						if arg-4 is "phantom":
+							set {_slot2} to "&c&lP"
+							set {_lore2} to "&c&lPhantom||&c&l  * &c+5%% PvP DMG"
+						if arg-4 is "yeti":
+							set {_slot2} to "&b&lY"
+							set {_lore2} to "&b&lYeti||&b&l  * &b+2.5%% PvP DMG||&b&l  * &b-2.5%% Incoming DMG"
+						if arg-4 is "yijki":
+							set {_slot2} to "&f&lM"
+							set {_lore2} to "&f&lMother of Yijki||&f&l  * &f-5%% Incoming DMG"
+						if arg-4 is "supreme":
+							set {_slot2} to "&4&lS"
+							set {_lore2} to "&4&lSupreme||&4&l  * &4+3%% PvP DMG"
+						if arg-4 is "traveler":
+							set {_slot2} to "&5&lT"
+							set {_lore2} to "&5&lTraveler||&5&l  * &5+7.5%% PvP DMG"
+						if arg-4 is "koth":
+							set {_slot2} to "&d&lK"
+							set {_lore2} to "&d&lKoth||&d&l  * &d+5%% PvP DMG||&d&l  * &d-12.5%% Incoming DMG"
+						if arg-4 is "dragon":
+							set {_slot2} to "&e&lD"
+							set {_lore2} to "&e&lDragon||&e&l  * &e+10%% PvP DMG||&e&l  * &e-10%% Incoming DMG"
+						if arg-4 is "engineer":
+							set {_slot2} to "&6&lE"
+							set {_lore2} to "&6&lEngineer||&6&l  * &6-9%% Incoming DMG"
+						if arg-5 is set:
+							if arg-5 is "phantom":
+								set {_slot3} to "&c&lP"
+								set {_lore3} to "&c&lPhantom||&c&l  * &c+5%% PvP DMG"
+							if arg-5 is "yeti":
+								set {_slot3} to "&b&lY"
+								set {_lore3} to "&b&lYeti||&b&l  * &b+2.5%% PvP DMG||&b&l  * &b-2.5%% Incoming DMG"
+							if arg-5 is "yijki":
+								set {_slot3} to "&f&lM"
+								set {_lore3} to "&f&lMother of Yijki||&f&l  * &f-5%% Incoming DMG"
+							if arg-5 is "supreme":
+								set {_slot3} to "&4&lS"
+								set {_lore3} to "&4&lSupreme||&4&l  * &4+3%% PvP DMG"
+							if arg-5 is "traveler":
+								set {_slot3} to "&5&lT"
+								set {_lore3} to "&5&lTraveler||&5&l  * &5+7.5%% PvP DMG"
+							if arg-5 is "koth":
+								set {_slot3} to "&d&lK"
+								set {_lore3} to "&d&lKoth||&d&l  * &d+5%% PvP DMG||&d&l  * &d-12.5%% Incoming DMG"
+							if arg-5 is "dragon":
+								set {_slot3} to "&e&lD"
+								set {_lore3} to "&e&lDragon||&e&l  * &e+10%% PvP DMG||&e&l  * &e-10%% Incoming DMG"
+							if arg-5 is "engineer":
+								set {_slot3} to "&6&lE"
+								set {_lore3} to "&6&lEngineer||&6&l  * &6-9%% Incoming DMG"
+							if arg-6 is set:
+								if arg-6 is "phantom":
+									set {_slot4} to "&c&lP"
+									set {_lore4} to "&c&lPhantom||&c&l  * &c+5%% PvP DMG"
+								if arg-6 is "yeti":
+									set {_slot4} to "&b&lY"
+									set {_lore4} to "&b&lYeti||&b&l  * &b+2.5%% PvP DMG||&b&l  * &b-2.5%% Incoming DMG"
+								if arg-6 is "yijki":
+									set {_slot4} to "&f&lM"
+									set {_lore4} to "&f&lMother of Yijki||&f&l  * &f-5%% Incoming DMG"
+								if arg-6 is "supreme":
+									set {_slot4} to "&4&lS"
+									set {_lore4} to "&4&lSupreme||&4&l  * &4+3%% PvP DMG"
+								if arg-6 is "traveler":
+									set {_slot4} to "&5&lT"
+									set {_lore4} to "&5&lTraveler||&5&l  * &5+7.5%% PvP DMG"
+								if arg-6 is "koth":
+									set {_slot4} to "&d&lK"
+									set {_lore4} to "&d&lKoth||&d&l  * &d+5%% PvP DMG||&d&l  * &d-12.5%% Incoming DMG"
+								if arg-6 is "dragon":
+									set {_slot4} to "&e&lD"
+									set {_lore4} to "&e&lDragon||&e&l  * &e+10%% PvP DMG||&e&l  * &e-10%% Incoming DMG"
+								if arg-6 is "engineer":
+									set {_slot4} to "&6&lE"
+									set {_lore4} to "&6&lEngineer||&6&l  * &6-9%% Incoming DMG"
+								if arg-7 is set:
+									if arg-7 is "phantom":
+										set {_slot5} to "&c&lP"
+										set {_lore5} to "&c&lPhantom||&c&l  * &c+5%% PvP DMG"
+									if arg-7 is "yeti":
+										set {_slot5} to "&b&lY"
+										set {_lore5} to "&b&lYeti||&b&l  * &b+2.5%% PvP DMG||&b&l  * &b-2.5%% Incoming DMG"
+									if arg-7 is "yijki":
+										set {_slot5} to "&f&lM"
+										set {_lore5} to "&f&lMother of Yijki||&f&l  * &f-5%% Incoming DMG"
+									if arg-7 is "supreme":
+										set {_slot5} to "&4&lS"
+										set {_lore5} to "&4&lSupreme||&4&l  * &4+3%% PvP DMG"
+									if arg-7 is "traveler":
+										set {_slot5} to "&5&lT"
+										set {_lore5} to "&5&lTraveler||&5&l  * &5+7.5%% PvP DMG"
+									if arg-7 is "koth":
+										set {_slot5} to "&d&lK"
+										set {_lore5} to "&d&lKoth||&d&l  * &d+5%% PvP DMG||&d&l  * &d-12.5%% Incoming DMG"
+									if arg-7 is "dragon":
+										set {_slot5} to "&e&lD"
+										set {_lore5} to "&e&lDragon||&e&l  * &e+10%% PvP DMG||&e&l  * &e-10%% Incoming DMG"
+									if arg-7 is "engineer":
+										set {_slot5} to "&6&lE"
+										set {_lore5} to "&6&lEngineer||&6&l  * &6-9%% Incoming DMG"
+									give arg-2 1 nether star named "&6&lArmor Crystal (&f%{_slot1}%&6, &f%{_slot2}%&6, &f%{_slot3}%&6, &f%{_slot4}%&6, &f%{_slot5}%&6&l)" with lore "&a100%% Success Rate||&7Can be applied to any non||&7armor set that is not||&7already equipped with a||&7bonus crystal to gain||&7a passive advantage!||||&6&lCrystal Bonus:|| %{_lore1}%|| %{_lore2}%|| %{_lore3}%|| %{_lore4}%|| %{_lore5}%"
+										
+								else:
+									if arg-6 is set:
+										give arg-2 1 nether star named "&6&lArmor Crystal (&f%{_slot1}%&6, &f%{_slot2}%&6, &f%{_slot3}%&6, &f%{_slot4}%&6&l)" with lore "&a100%% Success Rate||&7Can be applied to any non||&7armor set that is not||&7already equipped with a||&7bonus crystal to gain||&7a passive advantage!||||&6&lCrystal Bonus:|| %{_lore1}%|| %{_lore2}%|| %{_lore3}%|| %{_lore4}%"
+									
+							else:
+								if arg-5 is set:
+									give arg-2 1 nether star named "&6&lArmor Crystal (&f%{_slot1}%&6, &f%{_slot2}%&6, &f%{_slot3}%&6&l)" with lore "&a100%% Success Rate||&7Can be applied to any non||&7armor set that is not||&7already equipped with a||&7bonus crystal to gain||&7a passive advantage!||||&6&lCrystal Bonus:|| %{_lore1}%|| %{_lore2}%|| %{_lore3}%"
+										
+						else:
+							if arg-4 is set:
+								give arg-2 1 nether star named "&6&lArmor Crystal (&f%{_slot1}%&6, &f%{_slot2}%&6&l)" with lore "&a100%% Success Rate||&7Can be applied to any non||&7armor set that is not||&7already equipped with a||&7bonus crystal to gain||&7a passive advantage!||||&6&lCrystal Bonus:|| %{_lore1}%|| %{_lore2}%"
+									
+					else:
+						if arg-3 is set:
+							give arg-2 1 nether star named "&6&lArmor Crystal (&f%{_slot1}%&6&l)" with lore "&a100%% Success Rate||&7Can be applied to any non||&7armor set that is not||&7already equipped with a||&7bonus crystal to gain||&7a passive advantage!||||&6&lCrystal Bonus:|| %{_lore1}%"
+							
+on inventory click:
+	if clicked item is helmet or chestplate or leggings or boots:
+		if cursor item's lore contains "&6&lCrystal Bonus":
+			if clicked item's lore contains "&6&lArmor Crystal":
+				message "&c&l(!) &cThere is already a armor crystal on this item!"
+				cancel event
+			else:	
+				set lore of clicked item to "%lore of clicked item%||%name of player's cursor slot%"
+				play sound "SUCCESSFUL_HIT" to player with volume 1 and pitch 2
+				remove 1 of player's cursor slot from player's cursor slot
+				message "&a&l(!) &aYou have applied a armor crystal!"
+on damage:
+#PHANTOM
+	if lore of attacker's helmet contains "&6&lArmor Crystal":
+		if lore of attacker's helmet contains "&c&lP":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+		if lore of attacker's chestplate contains "&c&lP":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+			stop
+		if lore of attacker's leggings contains "&c&lP":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+		if lore of attacker's boots contains "&c&lP":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+	# YETI
+		if lore of attacker's helmet contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*1.025)
+			stop
+		if lore of attacker's chestplate contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*1.025)
+			stop
+		if lore of attacker's leggings contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*1.025)
+			stop
+		if lore of attacker's boots contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*1.025)
+			stop
+		if lore of victim's helmet contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*0.975)
+			stop
+		if lore of victim's chestplate contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*0.975)
+			stop
+		if lore of victim's leggings contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*0.975)
+			stop
+		if lore of victim's boots contains "&b&lY":
+			set {_damage} to damage
+			set damage to ({_damage}*0.975)
+			stop
+	# YIJKI
+		if lore of victim's helmet contains "&f&lM":
+			set {_damage} to damage
+			set damage to ({_damage}*0.950)
+			stop
+		if lore of victim's chestplate contains "&f&lM":
+			set {_damage} to damage
+			set damage to ({_damage}*0.950)
+			stop
+		if lore of victim's leggings contains "&f&lM":
+			set {_damage} to damage
+			set damage to ({_damage}*0.950)
+			stop
+		if lore of victim's boots contains "&f&lM":
+			set {_damage} to damage
+			set damage to ({_damage}*0.950)
+			stop
+	# SUPREME
+		if lore of attacker's helmet contains "&4&lS":
+			set {_damage} to damage
+			set damage to ({_damage}*1.030)
+			stop
+		if lore of attacker's chestplate contains "&4&lS":
+			set {_damage} to damage
+			set damage to ({_damage}*1.030)
+			stop
+		if lore of attacker's leggings contains "&4&lS":
+			set {_damage} to damage
+			set damage to ({_damage}*1.030)
+			stop
+		if lore of attacker's boots contains "&4&lS":
+			set {_damage} to damage
+			set damage to ({_damage}*1.030)
+			stop
+	# TRAVELER
+		if lore of attacker's helmet contains "&5&lT":
+			set {_damage} to damage
+			set damage to ({_damage}*1.030)
+			stop
+		if lore of attacker's chestplate contains "&5&lT":
+			set {_damage} to damage
+			set damage to ({_damage}*1.075)
+			stop
+		if lore of attacker's leggings contains "&5&lT":
+			set {_damage} to damage
+			set damage to ({_damage}*1.075)
+			stop
+		if lore of attacker's boots contains "&5&lT":
+			set {_damage} to damage
+			set damage to ({_damage}*1.075)
+			stop
+	# KOTH
+		if lore of attacker's helmet contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+			stop
+		if lore of attacker's chestplate contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+			stop
+		if lore of attacker's leggings contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+			stop
+		if lore of attacker's boots contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*1.05)
+			stop
+		if lore of victim's helmet contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*0.875)
+			stop
+		if lore of victim's chestplate contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*0.875)
+			stop
+		if lore of victim's leggings contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*0.875)
+			stop
+		if lore of victim's boots contains "&d&lK":
+			set {_damage} to damage
+			set damage to ({_damage}*0.875)
+			stop
+	# DRAGON
+		if lore of attacker's helmet contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*1.10)
+			stop
+		if lore of attacker's chestplate contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*1.10)
+			stop
+		if lore of attacker's leggings contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*1.10)
+			stop
+		if lore of attacker's boots contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*1.10)
+			stop
+		if lore of victim's helmet contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*0.9)
+			stop
+		if lore of victim's chestplate contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*0.9)
+			stop
+		if lore of victim's leggings contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*0.9)
+			stop
+		if lore of victim's boots contains "&e&lD":
+			set {_damage} to damage
+			set damage to ({_damage}*0.9)
+			stop
+	# Engineer
+		if lore of victim's helmet contains "&6&lE":
+			set {_damage} to damage
+			set damage to ({_damage}*0.910)
+			stop
+		if lore of victim's chestplate contains "&6&lE":
+			set {_damage} to damage
+			set damage to ({_damage}*0.910)
+			stop
+		if lore of victim's leggings contains "&6&lE":
+			set {_damage} to damage
+			set damage to ({_damage}*0.910)
+			stop
+		if lore of victim's boots contains "&6&lE":
+			set {_damage} to damage
+			set damage to ({_damage}*0.910)
+			stop			
